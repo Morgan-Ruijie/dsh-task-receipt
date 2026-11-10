@@ -1,0 +1,35 @@
+# Dependencies and build output
+node_modules/
+out/
+coverage/
+*.tgz
+
+# Local DSH test profiles, launchers, caches and evidence
+acceptance/
+launcher/
+data/
+profiles/
+.pnpm-store/
+.pnpm-home/
+npm-cache/
+.plugin-manager/
+
+# Secrets and environment
+.env
+.env.*
+.credentials.yaml
+.credentials*
+*.pem
+*.key
+id_rsa
+
+# Session data and logs
+sessions/
+*.log
+*.session.json
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

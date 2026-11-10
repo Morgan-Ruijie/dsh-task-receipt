@@ -1,0 +1,33 @@
+{
+  "name": "dsh-task-receipt",
+  "version": "0.1.2",
+  "description": "Local, explicit-task Markdown receipts from observed DeepSeek Harness tool outcomes",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22.19", "dsh": "0.2.2-rc.1" },
+  "exports": { ".": "./src/index.js", "./core": "./src/receipt.js" },
+  "files": [
+    "src",
+    "test",
+    "scripts",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "keywords": ["dsh-plugin", "deepseek-harness", "receipt", "evidence", "audit"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "compatibility": { "dsh": "0.2.2-rc.1", "profiles": ["web"] }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:sandbox": "node --test --test-isolation=none test/*.test.js",
+    "test:host": "node scripts/host-smoke.mjs",
+    "test:real-fs": "node scripts/real-file-tools.mjs"
+  }
+}
